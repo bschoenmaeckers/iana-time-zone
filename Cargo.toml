@@ -43,6 +43,9 @@ getrandom = { version = "0.2.1", features = ["js"] }
 [target.'cfg(target_os = "haiku")'.dependencies]
 iana-time-zone-haiku = { version = "0.1.1", path = "haiku" }
 
+[target.'cfg(all(target_os = "wasi", target_env = "p3"))'.dependencies]
+wasip3 = "0.4"
+
 [dev-dependencies]
 chrono-tz = "0.10.1"
 # Set a minimum, but unused, dependency on `getrandom` to ensure that cfg-if
